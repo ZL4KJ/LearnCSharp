@@ -34,6 +34,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SortReverse", "SortReverse\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SplitJoin", "SplitJoin\SplitJoin.csproj", "{D5A2ED0F-4F30-46A9-8BA3-0C90CB98F067}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Formatting", "Formatting\Formatting.csproj", "{66D705DB-1A01-4E7E-A17A-692551CF131F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -92,6 +94,10 @@ Global
 		{D5A2ED0F-4F30-46A9-8BA3-0C90CB98F067}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5A2ED0F-4F30-46A9-8BA3-0C90CB98F067}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5A2ED0F-4F30-46A9-8BA3-0C90CB98F067}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66D705DB-1A01-4E7E-A17A-692551CF131F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66D705DB-1A01-4E7E-A17A-692551CF131F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66D705DB-1A01-4E7E-A17A-692551CF131F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66D705DB-1A01-4E7E-A17A-692551CF131F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
