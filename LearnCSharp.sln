@@ -38,6 +38,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Formatting", "Formatting\Fo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModifyStrings", "ModifyStrings\ModifyStrings.csproj", "{B6F7E186-CB5C-4604-A80F-B35CB6A32D7A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrayRehomer", "StrayRehomer\StrayRehomer.csproj", "{05636B35-6643-450D-A41D-FDF16713B3BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -104,6 +106,10 @@ Global
 		{B6F7E186-CB5C-4604-A80F-B35CB6A32D7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6F7E186-CB5C-4604-A80F-B35CB6A32D7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6F7E186-CB5C-4604-A80F-B35CB6A32D7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05636B35-6643-450D-A41D-FDF16713B3BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05636B35-6643-450D-A41D-FDF16713B3BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05636B35-6643-450D-A41D-FDF16713B3BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05636B35-6643-450D-A41D-FDF16713B3BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
