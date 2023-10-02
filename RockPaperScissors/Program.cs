@@ -14,6 +14,7 @@ namespace RockPaperScissors
             int playerWins = 0;
             int playerLosses = 0;
             int gameDraws = 0;
+            int spock = 0;
 
             while (playAgain)
             {
@@ -27,7 +28,11 @@ namespace RockPaperScissors
                     player = Console.ReadLine();
                     player = player.ToUpper();
                     Console.Write(player);
-                    if (player == "SPOCK") Console.WriteLine(": That is not logcal!"); //Easter Egg :)
+                    if (player == "SPOCK")
+                    {
+                        Console.WriteLine(": That is not logcal!"); //Easter Egg :)
+                        spock++;
+                    }
                 }
 
                 switch (rand.Next(1, 4))
@@ -117,6 +122,10 @@ namespace RockPaperScissors
                 
             }
             Console.WriteLine($"Thanks for playing!\n\nWins: {playerWins}\nLosses: {playerLosses}\nDraws: {gameDraws}");
+            if (spock > 0)
+            {
+                Console.WriteLine($"You tried a Logical approach {spock} times");
+            }
             Console.ReadKey();
         }
      
