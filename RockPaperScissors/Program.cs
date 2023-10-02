@@ -117,6 +117,7 @@ namespace RockPaperScissors
                 
             }
             Console.WriteLine($"Thanks for playing!\n\nWins: {playerWins}\nLosses: {playerLosses}\nDraws: {gameDraws}");
+            Console.ReadKey();
         }
      
     }
