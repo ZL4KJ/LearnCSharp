@@ -48,7 +48,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PettingZooVisit", "PettingZ
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RPi_Blink", "RPi_Blink\RPi_Blink.csproj", "{CA37B1B5-17B7-48FC-8125-A92E7C880495}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionHandling", "ExceptionHandling\ExceptionHandling.csproj", "{12E96842-4AF2-415F-A0E0-236035933996}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExceptionHandling", "ExceptionHandling\ExceptionHandling.csproj", "{12E96842-4AF2-415F-A0E0-236035933996}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RockPaperScissors", "RockPaperScissors\RockPaperScissors.csproj", "{701EC692-0235-46C4-B69C-F168FA0B3A6E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -140,6 +142,10 @@ Global
 		{12E96842-4AF2-415F-A0E0-236035933996}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12E96842-4AF2-415F-A0E0-236035933996}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12E96842-4AF2-415F-A0E0-236035933996}.Release|Any CPU.Build.0 = Release|Any CPU
+		{701EC692-0235-46C4-B69C-F168FA0B3A6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{701EC692-0235-46C4-B69C-F168FA0B3A6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{701EC692-0235-46C4-B69C-F168FA0B3A6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{701EC692-0235-46C4-B69C-F168FA0B3A6E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
