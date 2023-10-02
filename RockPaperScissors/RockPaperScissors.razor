@@ -1,0 +1,134 @@
+﻿@page "/games/RockPaperScissors"
+@using System.ComponentModel.DataAnnotations;
+<h3>Rock Paper Scissors</h3>
+
+@if (!string.IsNullOrEmpty(gameComponent.playerChoice))
+{
+    <p class="text-danger">Player: @gameComponent.playerChoice</p>
+}
+@if (!string.IsNullOrEmpty(gameComponent.computer))
+{
+    <p class="text-info">Computer: @gameComponent.computer</p>
+}
+@if (!string.IsNullOrEmpty(gameComponent.answer))
+{
+    <p class="text-success">Result: @gameComponent.answer</p>
+}
+
+<EditForm Model="@gameComponent" class="row p-2" Columns="2" OnValidSubmit="runTurn">
+   <div class="col-md-3 mb-3">
+        <label for="playerChoice">ROCK, PAPER or SCISSORS?</label>
+        <InputText id="playerChoice" class="form-control" @bind-Value="gameComponent.player" />
+        <button type="submit" class="btn btn-primary">Draw</button>
+   </div>
+</EditForm>
+
+@code {
+    Random rand = new Random();
+    GameComponent gameComponent = new GameComponent();
+
+
+    public class GameComponent
+    {
+        public bool playAgain = true;
+        [Display(Name = "First Name")]
+        public string player { get; set; }
+        public string computer { get; set; }
+        public string answer { get; set; }
+        public int playerWins { get; set; }
+        public int playerLosses { get; set; }
+        public int gameDraws { get; set; }
+        public string playerChoice { get; set; }
+    }
+
+    void runTurn()
+    {
+        gameComponent.playerChoice = gameComponent.player.ToUpper();
+        if (gameComponent.playerChoice == "SPOCK")
+        {
+            gameComponent.player = "";
+            gameComponent.computer = "";
+            gameComponent.playerChoice = "";
+            gameComponent.answer = "Live long and Prosper!";
+            return;
+        } 
+        else if (gameComponent.playerChoice != "ROCK" && gameComponent.playerChoice != "PAPER" && gameComponent.playerChoice != "SCISSORS")
+        {
+            gameComponent.player = "";
+            gameComponent.computer = "";
+            gameComponent.playerChoice = "";
+            gameComponent.answer = "You MUST enter only ROCK, PAPER or SCISSORS";
+            return;
+        }
+        switch (rand.Next(1, 4))
+            {
+                case 1:
+                    gameComponent.computer = "ROCK";
+                    break;
+                case 2:
+                    gameComponent.computer = "PAPER";
+                    break;
+                case 3:
+                    gameComponent.computer = "SCISSORS";
+                    break;
+            }
+           
+            @switch (gameComponent.playerChoice)
+            {
+                case "ROCK":
+                    if (gameComponent.computer == "ROCK")
+                    {
+                        gameComponent.answer = "It's a draw!";
+                        gameComponent.gameDraws++;
+                    }
+                    else if (gameComponent.computer == "PAPER")
+                    {
+                        gameComponent.answer = "You lose!";
+                        gameComponent.playerLosses++;
+                    }
+                    else
+                    {
+                        gameComponent.answer = "Winner, Winner, Chicken Dinner";
+                        gameComponent.playerWins++;
+                    }
+                    break;
+            case "PAPER":
+                if (gameComponent.computer == "PAPER")
+                {
+                    gameComponent.answer = "It's a draw!";
+                    gameComponent.gameDraws++;
+                }
+                else if (gameComponent.computer == "SCISSORS")
+                {
+                    gameComponent.answer = "You Lose!";
+                    gameComponent.playerLosses++;
+                }
+                else
+                {
+                    gameComponent.answer = "Winner, Winner, Chicken Dinner";
+                    gameComponent.playerWins++;
+                }
+                break;
+            case "SCISSORS":
+                if (gameComponent.computer == "SCISSORS")
+                {
+                    gameComponent.answer = "It's a draw!";
+                    gameComponent.gameDraws++;
+                }
+                else if (gameComponent.computer == "ROCK")
+                {
+                    gameComponent.answer = "You Lose!";
+                    gameComponent.playerLosses++;
+                }
+                else
+                {
+                    gameComponent.answer = "Winner, Winner, Chicken Dinner!";
+                    gameComponent.playerWins++;
+                }
+                break;
+        }
+        gameComponent.player = "";
+    }
+        
+}
+}
